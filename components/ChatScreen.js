@@ -12,7 +12,7 @@ import {useState,useRef} from "react";
 import firebase from "firebase"
 import getRecipientEmail from "../utils/getRecipientEmail";
 import Message from "./Message";
-// import TimeAgo from "timeago-react"
+import TimeAgo from "timeago-react"
 
 
 function ChatScreen({chat,messages}) {
@@ -78,14 +78,12 @@ function ChatScreen({chat,messages}) {
                 {recipientSnapshot?(
                  <p>Lastseen ... {' '}
                  {recipient?.lastSeen?.toDate()?(
-                    //  <TimeAgo datetime={recipient?.lastSeen?.toDate()}/>
-                    <p></p>
+                    <TimeAgo datetime={recipient?.lastSeen?.toDate()}/>
                  ): "offLine"}
                     </p>
                 ):(
                     <p>Loading </p>
                 )}
-            {/* {console.log(lastSeen)} */}
             </HeaderInformation>
             <HeaderIcons>
                 <IconButton>

@@ -1,4 +1,4 @@
-// import {Circle} from "better-react-spinkit"
+// import {CircleLoader} from "better-react-spinkit"
 function Loading() {
     return (
         <center style={{display:"grid", placeItems:"center", height:"100vh"}}>
@@ -7,7 +7,7 @@ function Loading() {
                 alt="Loading..." 
                 height={200} 
                 style={{marginBottom:10}}/>
-                {/* <Circle color="#3366ff"/> */}
+                {/* <CircleLoader color="#3366ff"/> */}
             </div>
         </center>
     )
