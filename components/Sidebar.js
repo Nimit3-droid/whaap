@@ -33,14 +33,6 @@ const chatAlreadyExists=(recipientEmail)=>
             <Header>
                 <UserAvatar src={user.photoURL} onClick={()=>auth.signOut()}/>
                 <div> {user.email.split("@")[0].charAt(0).toUpperCase() + user.email.split("@")[0].slice(1)}</div>
-                <IconsContainer>
-                    <IconButton>
-                        <ChatIcon/>
-                    </IconButton>
-                    <IconButton>
-                        <MoreVertIcon/>
-                    </IconButton>
-                </IconsContainer>
             </Header>
             <Search>
                 <SearchIcon/>
@@ -59,16 +51,16 @@ export default Sidebar;
 
 const Container=styled.div`
     flex:0.45;
-    border-right:1px solid whitesmoke;
+    border-right:1px solid #4f5152;
+    background-color:#131c21;
+    color:white;
     height:100vh;
     min-width:300px;
     max-width:300px;
-    overflow-y:scroll;
-
+    overflow:scroll;
     ::-webkit-scrollbar{
         display:none;
     }
-
     -ms-overflow-style:none;
     scrollbar-width:none;
 `;
@@ -76,13 +68,14 @@ const Header=styled.div`
     display:flex;
     position:sticky;
     top:0;
-    background-color:white;
+    background-color:#131c21;
     z-index:1;
     justify-content:space-between;
     align-items:center;
     padding:15px;
     height:80px;
-    border-bottom:1px solid whitesmoke;
+    border-bottom:1px solid #4f5152;
+    border-right:1px solid #4f5152;
 `;
 const UserAvatar=styled(Avatar)`
     margin : 10px;
@@ -91,7 +84,8 @@ const UserAvatar=styled(Avatar)`
         opacity:0.8;
     }
 `;
-const IconsContainer=styled.div``;
+// const IconsContainer=styled.div`
+// color:white;`;
 const Search=styled.div`
     display:flex;
     align-items:center;
@@ -100,13 +94,18 @@ const Search=styled.div`
 `;
 const SearchInput=styled.input`
     outline-width:0;
+    color:white;
+    background-color:#131c21;
     border:none;
     flex:1;
 `;
 const SidebarButton=styled(Button)`
     width:100%;
+    
+    background-color:#131c21;
     &&&{
-        border-top: 1px solid whitesmoke;
-        border-bottom: 1px solid whitesmoke;
+        border-top: 1px solid #4f5152;
+        border-bottom: 1px solid #4f5152;
+        color:white;
     }
 `;

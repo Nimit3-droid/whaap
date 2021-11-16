@@ -10,9 +10,11 @@ function Chat({id,users}) {
     const router =useRouter();
     const [user]=useAuthState(auth);
     const [recipientSnapshot]=useCollection(db.collection("users").where("email","==",getRecipientEmail(users,user)))
+
     const enterChat = () => {
         router.push(`/chat/${id}`)
     }
+    
     const recipient=recipientSnapshot?.docs?.[0]?.data();
     const recipientEmail=getRecipientEmail(users,user)
     return (
@@ -36,9 +38,12 @@ const Container=styled.div`
     cursor:center;
     padding:15px;
     word-break:break-word;
+    border-bottom:1px solid #4f5152;
+    color:white;
     
     :hover{
-        background-color:#e9eaeb;
+        background-color:#2a2e38;
+        cursor:pointer;
     }
 `;
 const UserAvatar=styled(Avatar)`

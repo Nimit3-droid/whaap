@@ -24,20 +24,27 @@ const Container=styled.div``;
 
 const MessageElement = styled.p`
     width:fit-content;
-    padding:15px;
+    max-width:75vh;
+    padding-left: 15px;    
+    padding-right: 5px;    
+    padding-top: 2px;    
     border-radius:8px;
     margin:10px;
     min-width:60px;
-    padding-bottom:26px;
     position:relative;
     text-align:right;
+    color:white;
 `;
 const Sender=styled(MessageElement)`
     margin-left:auto;
-    background-color:#dcf8c6;
+    background-color:#056162;
 `;
 const Reciever=styled(MessageElement)`
+    
     text-align:left;
-    background-color:whitesmoke;
+    background-color:#262d31;
 `;
-const Timestamp=styled.div``;
+const Timestamp=styled.div`
+    font-size:11px;
+    margin-top:10px;
+`;

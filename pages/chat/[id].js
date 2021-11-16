@@ -12,7 +12,7 @@ function Chat({chat,messages}) {
     return (
         <Container>
             <Head>
-                <title>Chat with {getRecipientEmail(chat.users,user)}</title>
+                <title>Chat with {getRecipientEmail(chat.users,user).split("@")[0].charAt(0).toUpperCase() + getRecipientEmail(chat.users,user).split("@")[0].slice(1)}</title>
             </Head>
             <Sidebar/>
             <ChatContainer>
