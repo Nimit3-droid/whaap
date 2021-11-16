@@ -23,7 +23,7 @@ function Chat({id,users}) {
                 <UserAvatar>{recipientEmail[0]}</UserAvatar>
             )}
             
-            <p>{recipientEmail}</p>
+            <p>{recipientEmail.split("@")[0].charAt(0).toUpperCase() + recipientEmail.split("@")[0].slice(1)}</p>
         </Container>
     )
 }

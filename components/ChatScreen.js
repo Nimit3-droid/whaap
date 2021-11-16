@@ -74,7 +74,7 @@ function ChatScreen({chat,messages}) {
                 <Avatar>{recipientEmail[0]}</Avatar>
                 )}
             <HeaderInformation>
-                <h3>{recipientEmail}</h3>
+                <h3>{recipientEmail.split("@")[0].charAt(0).toUpperCase() + recipientEmail.split("@")[0].slice(1)}</h3>
                 {recipientSnapshot?(
                  <p>Lastseen ... {' '}
                  {recipient?.lastSeen?.toDate()?(
